@@ -1,7 +1,7 @@
 {
   "author": "Yosuke Kumakura <kumatch@gmail.com>",
   "name": "runie",
-  "description": "",
+  "description": "runie.js - deliver variables to front-end scripts by DOM base.",
   "version": "0.1.0",
   "main": "./lib/runie",
   "repository": {
