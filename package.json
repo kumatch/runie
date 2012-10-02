@@ -1,0 +1,35 @@
+{
+  "author": "Yosuke Kumakura <kumatch@gmail.com>",
+  "name": "runie",
+  "description": "",
+  "version": "0.1.0",
+  "main": "./lib/runie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumatch/runie.git"
+  },
+  "github": "https://github.com/kumatch/runie",
+  "dependencies": {
+    "jquery":"*",
+    "asyncall":">=0.2.0"
+  },
+  "jam": {
+    "dependencies": {
+      "jquery":"*",
+      "asyncall":">=0.2.0"
+    }
+  },
+  "devDependencies": {
+    "grunt":"*",
+    "mocha":"*",
+    "should":"*",
+    "amdefine":"*"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}
