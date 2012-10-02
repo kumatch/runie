@@ -1,7 +1,7 @@
 runie.js
 ===========
 
-write/read javascript variables by DOM base.
+runie.js - deliver variables to front-end scripts by DOM base.
 
 
 Usage
@@ -18,7 +18,7 @@ var user = {
 };
 ```
 
-and write a variable in your HTML contents. (ex. uses in Jade template)
+and write a tag in your HTML contents. (ex. uses in Jade template)
 
 ```
 h1= title
@@ -26,7 +26,7 @@ h1= title
 div
   p ...
 
-- runie.write('user', user);
+!{runie.tag('user', user)}
 ```
 
 
@@ -44,7 +44,7 @@ require(['runie'], function (runie) {
 ```
 
 
-###or Browser plain
+###or browser plain
 
 Requires [jQuery](http://jquery.com/) , and [asyncall](https://github.com/kumatch/asyncall) .
 
