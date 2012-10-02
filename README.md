@@ -1,11 +1,34 @@
 runie.js
 ===========
 
-runie.js - deliver variables to front-end scripts by DOM base.
+write/read javascript variables by DOM base.
 
 
 Usage
 -----
+
+###Node
+
+    $ npm install runie
+
+```javascript
+var runie = require('runie');
+var user = {
+    name: "kumatch"
+};
+```
+
+and write a variable in your HTML contents. (ex. uses in Jade template)
+
+```
+h1= title
+
+div
+  p ...
+
+- runie.write('user', user);
+```
+
 
 ###Browser with Jam (AMD support)
 
@@ -21,9 +44,13 @@ require(['runie'], function (runie) {
 ```
 
 
-###Browser plain
+###or Browser plain
+
+Requires [jQuery](http://jquery.com/) , and [asyncall](https://github.com/kumatch/asyncall) .
 
 ```
+<script type="text/javascript" src="jquery-x.x.x.min.js"></script>
+<script type="text/javascript" src="asyncall-x.x.x.min.js"></script>
 <script type="text/javascript" src="runie-x.x.x.min.js"></script>
 <script>
 var user = runie.read('user');
@@ -31,24 +58,6 @@ var user = runie.read('user');
 ```
 
 
-###Node
-
-    $ npm install runie
-
-```javascript
-var runie = require('runie');
-```
-
-And write a tag in your HTML contents. (ex. uses in Jade template)
-
-```
-h1= title
-
-div
-  p ...
-
-!{runie.tag('user', user)}
-```
 
 
 License
